@@ -1,6 +1,6 @@
 ## Установка
 
-1. Кинуть homes-plugin.jar в plugins/ на Paper 1.20.x+.
+1. Кинуть homes-plugin.jar в plugins/ на Paper 1.21.x (тестилось на 1.21.11)
 2. Рестарт/reload сервера.
 3. Данные хомов хранятся в plugins/HomesPlugin/homes.yml.
 
