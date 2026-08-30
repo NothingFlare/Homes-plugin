@@ -38,7 +38,7 @@
 
 ## Лимит хомов
 
-'plugins/HomesPlugin/config.yml':
+plugins/HomesPlugin/config.yml:
 
 ```yaml
 home-limit: 10
