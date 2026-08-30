@@ -38,10 +38,11 @@
 
 ## Лимит хомов
 
-plugins/HomesPlugin/config.yml:
+'plugins/HomesPlugin/config.yml':
 
+```yaml
 home-limit: 10
-
+```
 
 Общий лимит на всех, без permission-групп — единственное исключение:
 игроки с нодой homes.bypass (по умолчанию op) лимит не проверяют вообще.
