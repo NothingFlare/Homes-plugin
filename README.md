@@ -1,6 +1,6 @@
 ## Установка
 
-1. Кинуть homes-plugin.jar в plugins/ на Paper/spigot/folia 1.20+ (тестилось paper 1.21.11/26.2, spigot 26.1/1.8, folia 26.2)
+1. Кинуть homes-plugin.jar в plugins/ на Paper/purpur/folia 1.20+ (тестилось paper 1.21.11, не факт что будет работать на spigot и версиях старше 1.20!)
 2. Рестарт сервера.
 3. Данные хомов хранятся в plugins/HomesPlugin/homes.yml.
 
