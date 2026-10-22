@@ -1,0 +1,144 @@
+# ==============================================================================
+# Japanese / 日本語 (ja)
+# ==============================================================================
+
+command:
+  only-players: "&cこのコマンドはプレイヤーのみ実行できます。"
+  no-permission: "&cこのコマンドを実行する権限がありません。"
+
+sethome:
+  usage: "&e使用方法: /sethome <名前>"
+  name-reserved: "&c名前 {name} はシステムコマンド用に予約されています。"
+  invalid-name: "&cホーム名には英数字、ハイフン、アンダースコアのみ使用できます（最大32文字）。ドットは使用できません。"
+  limit-reached: "&cホーム数の上限に達しました ({count}/{limit})。/delhome <名前> で不要なホームを削除してください。"
+  overwritten: "&aホーム {name} を上書きしました。"
+  created: "&aホーム {name} を設定しました。"
+
+delhome:
+  usage: "&e使用方法: /delhome <名前>"
+  deleted: "&aホーム {name} を削除しました。"
+  not-found: "&cホーム {name} が見つかりません。"
+  no-permission: "&cホームを削除する権限がありません。"
+
+home:
+  usage: "&e使用方法: /home <名前>"
+  usage-admin: "&e使用方法: /home <名前> | /home reload"
+  not-found: "&cホーム {name} が見つかりません。"
+  world-not-loaded: "&cホーム {name} のワールド ({world}) が読み込まれていません。"
+  only-players: "&cプレイヤーのみテレポートできます。コンソール用: /home clear <プレイヤー|all> または /home reload"
+
+homes:
+  usage: "&e使用方法: /homes"
+  only-players: "&c/homes (GUI) コマンドはプレイヤーのみ使用できます。"
+  console-usage: "&eコンソール使用方法: /homes add <homes.yml|sqlite|legacy> to MySQL <ユーザー:パスワード>"
+
+clear:
+  console-only: "&c/home clear コマンドはサーバーコンソールからのみ実行できます！"
+  usage: "&e使用方法: /home clear <プレイヤー|all>"
+  all-success: "&a全プレイヤーのホームをすべて削除しました（削除数: {count}）。"
+  player-success: "&aプレイヤー {player} のホームをすべて削除しました（削除数: {count}）。"
+  player-not-found: "&cプレイヤー {player} のホームは見つかりませんでした。"
+
+reload:
+  success: "&aHomes の設定、データベース、言語ファイルを再読み込みしました！"
+  error: "&cストレージエンジンの再読み込み中にエラーが発生しました！サーバーコンソールを確認してください。"
+
+export:
+  console-only: "&c/homes add コマンドはサーバーコンソールからのみ実行できます！"
+  usage: "&e使用方法: /homes add <homes.yml|sqlite|legacy> to MySQL <ユーザー:パスワード>"
+  example-1: "&7例: /homes add homes.yml to MySQL root:secret123"
+  example-2: "&7例: /homes add sqlite to MySQL root:secret123"
+  unsupported-target: "&cサポートされていないターゲットデータベースです: {target}。対応: MySQL"
+  start: "&e[Homes] {source} から MySQL へのホームデータ移行を開始します..."
+  empty: "&c[Homes] ソース '{source}' に移行可能なホームが見つかりませんでした！"
+  connecting: "&e[Homes] {count} 件のホームが見つかりました。MySQL に接続中..."
+  writing: "&e[Homes] MySQL への接続が完了しました。データベースに書き込み中..."
+  success-header: "&a===================================================="
+  success-title: "&a[Homes] データ移行が正常に完了しました！"
+  success-stats: "&a移行されたホーム数: {count}（対象プレイヤー数: {players}）"
+  success-target: "&a保存先: MySQL {host}:{port}/{database}（テーブル: {table}）"
+  success-footer: "&a===================================================="
+  error: "&c[Homes] ホームの移行中にエラーが発生しました: {error}"
+
+teleport:
+  warmup: "&e動かないでください！{seconds} 秒後にテレポートします。"
+  cancelled-moved: "&cテレポートがキャンセルされました: 移動しました。"
+  cancelled-damage: "&cテレポートがキャンセルされました: ダメージを受けました。"
+  failed: "&cテレポートに失敗しました。"
+  world-not-loaded: "&cテレポートに失敗しました: 対象ワールドが読み込まれていません。"
+  success: "&a{name} へテレポートしました。"
+  no-permission: "&cホームへテレポートする権限がありません。"
+
+gui:
+  main-title: "マイホーム一覧"
+  slot-blocked: "&cこのスロットはホーム制限によりロックされています ({limit})。"
+  home-lost: "&cホーム {name} は既に存在しません。"
+
+  barrier-name: "&cロックされたスロット"
+  barrier-lore:
+    - "&7ホーム上限: &f{limit}"
+    - "&8このスロットはロックされています。"
+
+  compass-name: "&6{name}"
+  compass-lore-world: "&7ワールド: &f{world}"
+  compass-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  compass-lore-teleport: "&a左クリック — テレポート"
+  compass-lore-manage: "&e右クリック — ホーム管理"
+
+  editor-title: "&3{name}"
+  editor-teleport-name: "&aテレポート"
+  editor-teleport-lore:
+    - "&7クリックしてホーム {name} へ"
+    - "&7テレポートします。"
+
+  editor-info-name: "&6ホーム {name}"
+  editor-info-lore-world: "&7ワールド: &f{world}"
+  editor-info-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  editor-info-lore-rotation: "&8向き: {yaw}° / {pitch}°"
+
+  editor-delete-name: "&c削除の確認"
+  editor-delete-lore:
+    - "&7クリックしてホーム {name} を"
+    - "&7完全に削除します。"
+    - ""
+    - "&4この操作は取り消せません！"
+
+  editor-back-name: "&e戻る"
+  editor-back-lore:
+    - "&7ホーム一覧へ戻る"
+
+console:
+  storage-init-mysql: "[Homes] MySQL ストレージに接続中 ({host}:{port}/{database})..."
+  storage-init-yaml: "[Homes] Legacy YAML ストレージを初期化中 ({file})..."
+  storage-init-sqlite: "[Homes] SQLite ローカルストレージを初期化中 ({file})..."
+  storage-success: "[Homes] ストレージ {type} の初期化が完了しました。"
+  storage-error: "[Homes] ストレージ {type} の初期化中に致命的なエラーが発生しました！"
+  storage-close-error: "[Homes] 以前のストレージのクローズ中にエラーが発生しました:"
+  storage-reload-error: "[Homes] 再読み込み時の新しいストレージへの接続に失敗しました！"
+  homes-loaded: "[Homes] データベースから {count} 件のホームを読み込みました。"
+  homes-load-error: "[Homes] データベースからのホーム読み込み中にエラーが発生しました！"
+  migration-found: "[Homes] 従来の homes.yml ファイルを検出しました。データベースへ自動移行中..."
+  migration-success: "[Homes] 移行が正常に完了しました！{count} 件のホームを移行しました。"
+  migration-error: "[Homes] 移行されたホーム {name} の保存中にエラー:"
+  save-async-error: "[Homes] プレイヤー {uuid} のホーム {name} の非同期保存中にエラー:"
+  plugin-disabled: "[Homes] Homes が無効化されました！"
+  init-failed: "[Homes] データストレージの初期化に失敗しました！プラグインを停止します。"
+  updates-checking: "[Homes] アップデートを確認中..."
+  updates-latest: "[Homes] 最新バージョンを使用しています (v{version})"
+  updates-available: "[Homes] 新しいバージョンが利用可能です: v{remote} (現在: v{current})"
+  updates-download: "[Homes] ダウンロードはこちら:"
+  updates-fail: "[Homes] API から最新バージョンを取得できませんでした。"
+  updates-error: "[Homes] アップデート確認エラー: {error}"
+
+banner:
+  hello: "  こんにちは、世界！"
+  telegram: "  Telegram チャンネルをチェック！"
+  version: "  Homes バージョン: {version}"
+  language: "  言語: {language}"
+  storage: "  ストレージ: {storage}"
+  encryption-enabled: "有効 (AES-256-GCM)"
+  encryption-disabled: "無効"
+  encryption: "  暗号化: {status}"
+  platform: "  Homes は {platform} で動作中"
+  reloaded: "  Homes は正常に再読み込みされました！"
+  enabled: "  Homes は正常に起動しました！"

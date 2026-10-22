@@ -1,0 +1,144 @@
+# ==============================================================================
+# English (en)
+# ==============================================================================
+
+command:
+  only-players: "&cOnly players can execute this command."
+  no-permission: "&cYou do not have permission to execute this command."
+
+sethome:
+  usage: "&eUsage: /sethome <name>"
+  name-reserved: "&cThe name {name} is reserved for system commands."
+  invalid-name: "&cHome name can only contain letters, numbers, hyphens, and underscores (max 32 chars). Dots are not allowed."
+  limit-reached: "&cHome limit reached ({count}/{limit}). Remove an unneeded home with /delhome <name>."
+  overwritten: "&aHome {name} overwritten."
+  created: "&aHome {name} set."
+
+delhome:
+  usage: "&eUsage: /delhome <name>"
+  deleted: "&aHome {name} deleted."
+  not-found: "&cHome {name} not found."
+  no-permission: "&cYou do not have permission to delete homes."
+
+home:
+  usage: "&eUsage: /home <name>"
+  usage-admin: "&eUsage: /home <name> | /home reload"
+  not-found: "&cHome {name} not found."
+  world-not-loaded: "&cWorld of home {name} ({world}) is not loaded."
+  only-players: "&cOnly players can teleport. Console can use: /home clear <player|all> or /home reload"
+
+homes:
+  usage: "&eUsage: /homes"
+  only-players: "&cThe /homes command (GUI) is only available to players."
+  console-usage: "&eConsole usage: /homes add <homes.yml|sqlite|legacy> to MySQL <user:password>"
+
+clear:
+  console-only: "&cThe command /home clear can only be executed from the server console!"
+  usage: "&eUsage: /home clear <player|all>"
+  all-success: "&aAll homes of all players have been cleared (total deleted: {count})."
+  player-success: "&aAll homes of player {player} have been cleared (deleted: {count})."
+  player-not-found: "&cNo homes found for player {player}."
+
+reload:
+  success: "&aHomes config, storage, and languages reloaded successfully!"
+  error: "&cError reloading storage engine! Please check server console."
+
+export:
+  console-only: "&cThe command /homes add can only be executed from the server console!"
+  usage: "&eUsage: /homes add <homes.yml|sqlite|legacy> to MySQL <user:password>"
+  example-1: "&7Example: /homes add homes.yml to MySQL root:secret123"
+  example-2: "&7Example: /homes add sqlite to MySQL root:secret123"
+  unsupported-target: "&cUnsupported target database: {target}. Supported: MySQL"
+  start: "&e[Homes] Starting export of homes from {source} to MySQL..."
+  empty: "&c[Homes] No homes found to export in source '{source}'!"
+  connecting: "&e[Homes] Found {count} homes to export. Connecting to MySQL..."
+  writing: "&e[Homes] Connection to MySQL established. Writing records into database..."
+  success-header: "&a===================================================="
+  success-title: "&a[Homes] Export finished successfully!"
+  success-stats: "&aMigrated homes: {count} (players: {players})"
+  success-target: "&aTarget database: MySQL {host}:{port}/{database} (table: {table})"
+  success-footer: "&a===================================================="
+  error: "&c[Homes] Error exporting homes: {error}"
+
+teleport:
+  warmup: "&eStand still! Teleporting in {seconds} sec."
+  cancelled-moved: "&cTeleportation cancelled: you moved."
+  cancelled-damage: "&cTeleportation cancelled: you took damage."
+  failed: "&cTeleportation failed."
+  world-not-loaded: "&cTeleportation failed: target world is not loaded."
+  success: "&aTeleported to {name}."
+  no-permission: "&cYou do not have permission to teleport to homes."
+
+gui:
+  main-title: "Your Homes"
+  slot-blocked: "&cThis slot is locked by your home limit ({limit})."
+  home-lost: "&cHome {name} no longer exists."
+
+  barrier-name: "&cLocked Slot"
+  barrier-lore:
+    - "&7Home limit: &f{limit}"
+    - "&8This slot is locked."
+
+  compass-name: "&6{name}"
+  compass-lore-world: "&7World: &f{world}"
+  compass-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  compass-lore-teleport: "&aLMB — Teleport"
+  compass-lore-manage: "&eRMB — Manage home"
+
+  editor-title: "&3{name}"
+  editor-teleport-name: "&aTeleport"
+  editor-teleport-lore:
+    - "&7Click to teleport"
+    - "&7to home {name}."
+
+  editor-info-name: "&6Home {name}"
+  editor-info-lore-world: "&7World: &f{world}"
+  editor-info-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  editor-info-lore-rotation: "&8Rotation: {yaw}° / {pitch}°"
+
+  editor-delete-name: "&cConfirm Deletion"
+  editor-delete-lore:
+    - "&7Click to permanently"
+    - "&7delete home {name}."
+    - ""
+    - "&4Action is irreversible!"
+
+  editor-back-name: "&eBack"
+  editor-back-lore:
+    - "&7Return to homes overview"
+
+console:
+  storage-init-mysql: "[Homes] Connecting to MySQL storage ({host}:{port}/{database})..."
+  storage-init-yaml: "[Homes] Initializing Legacy YAML storage ({file})..."
+  storage-init-sqlite: "[Homes] Initializing SQLite local storage ({file})..."
+  storage-success: "[Homes] Storage {type} successfully initialized."
+  storage-error: "[Homes] Critical error initializing storage {type}!"
+  storage-close-error: "[Homes] Error properly closing previous storage engine:"
+  storage-reload-error: "[Homes] Error connecting to new storage on reload! Previous storage kept active."
+  homes-loaded: "[Homes] Loaded {count} homes from database."
+  homes-load-error: "[Homes] Error loading homes from database!"
+  migration-found: "[Homes] Detected legacy homes.yml file. Performing automatic migration into database..."
+  migration-success: "[Homes] Migration completed successfully! Migrated {count} homes."
+  migration-error: "[Homes] Error saving migrated home {name}:"
+  save-async-error: "[Homes] Error asynchronously saving home {name} for player {uuid}:"
+  plugin-disabled: "[Homes] Homes is disabled!"
+  init-failed: "[Homes] Failed to initialize data storage! Plugin is shutting down."
+  updates-checking: "[Homes] Checking for updates..."
+  updates-latest: "[Homes] You are running on the latest version (v{version})"
+  updates-available: "[Homes] A new version is available: v{remote} (Current: v{current})"
+  updates-download: "[Homes] Download the update at:"
+  updates-fail: "[Homes] Could not retrieve the latest version from Modrinth/GitHub API."
+  updates-error: "[Homes] Could not check for updates: {error}"
+
+banner:
+  hello: "  Hello World!"
+  telegram: "  Check our telegram channel!"
+  version: "  Homes version: {version}"
+  language: "  Language: {language}"
+  storage: "  Storage: {storage}"
+  encryption-enabled: "ENABLED (AES-256-GCM)"
+  encryption-disabled: "DISABLED"
+  encryption: "  Encryption: {status}"
+  platform: "  Homes is running on {platform}"
+  reloaded: "  Homes is reloaded successfully!"
+  enabled: "  Homes is enabled successfully!"
