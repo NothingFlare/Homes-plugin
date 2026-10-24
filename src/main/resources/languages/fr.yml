@@ -1,0 +1,144 @@
+# ==============================================================================
+# French / Français (fr)
+# ==============================================================================
+
+command:
+  only-players: "&cSeuls les joueurs peuvent exécuter cette commande."
+  no-permission: "&cVous n'avez pas la permission d'exécuter cette commande."
+
+sethome:
+  usage: "&eUtilisation: /sethome <nom>"
+  name-reserved: "&cLe nom {name} est réservé aux commandes du système."
+  invalid-name: "&cLe nom du home ne peut contenir que des lettres, chiffres, tirets et underscores (max 32 car.). Les points sont interdits."
+  limit-reached: "&cLimite de homes atteinte ({count}/{limit}). Supprimez-en un avec /delhome <nom>."
+  overwritten: "&aLe home {name} a été écrasé."
+  created: "&aLe home {name} a été défini."
+
+delhome:
+  usage: "&eUtilisation: /delhome <nom>"
+  deleted: "&aLe home {name} a été supprimé."
+  not-found: "&cLe home {name} est introuvable."
+  no-permission: "&cVous n'avez pas la permission de supprimer des homes."
+
+home:
+  usage: "&eUtilisation: /home <nom>"
+  usage-admin: "&eUtilisation: /home <nom> | /home reload"
+  not-found: "&cLe home {name} est introuvable."
+  world-not-loaded: "&cLe monde du home {name} ({world}) n'est pas chargé."
+  only-players: "&cSeuls les joueurs peuvent se téléporter. Console: /home clear <joueur|all> ou /home reload"
+
+homes:
+  usage: "&eUtilisation: /homes"
+  only-players: "&cLa commande /homes (GUI) est réservée aux joueurs."
+  console-usage: "&eUtilisation console: /homes add <homes.yml|sqlite|legacy> to MySQL <utilisateur:motdepasse>"
+
+clear:
+  console-only: "&cLa commande /home clear ne peut être exécutée que depuis la console !"
+  usage: "&eUtilisation: /home clear <joueur|all>"
+  all-success: "&aTous les homes de tous les joueurs ont été supprimés (total: {count})."
+  player-success: "&aTous les homes du joueur {player} ont été supprimés (total: {count})."
+  player-not-found: "&cAucun home trouvé pour le joueur {player}."
+
+reload:
+  success: "&aConfiguration, base de données et langues de Homes rechargées avec succès !"
+  error: "&cErreur lors du rechargement du moteur de stockage ! Vérifiez la console."
+
+export:
+  console-only: "&cLa commande /homes add ne peut être exécutée que depuis la console !"
+  usage: "&eUtilisation: /homes add <homes.yml|sqlite|legacy> to MySQL <utilisateur:motdepasse>"
+  example-1: "&7Exemple: /homes add homes.yml to MySQL root:secret123"
+  example-2: "&7Exemple: /homes add sqlite to MySQL root:secret123"
+  unsupported-target: "&cBase de données cible non prise en charge: {target}. Supporté: MySQL"
+  start: "&e[Homes] Début de l'exportation des homes depuis {source} vers MySQL..."
+  empty: "&c[Homes] Aucun home à exporter trouvé dans la source '{source}' !"
+  connecting: "&e[Homes] {count} homes trouvés. Connexion à MySQL en cours..."
+  writing: "&e[Homes] Connexion à MySQL établie. Écriture des données en cours..."
+  success-header: "&a===================================================="
+  success-title: "&a[Homes] Exportation terminée avec succès !"
+  success-stats: "&aHomes migrés: {count} (joueurs: {players})"
+  success-target: "&aBase cible: MySQL {host}:{port}/{database} (table: {table})"
+  success-footer: "&a===================================================="
+  error: "&c[Homes] Erreur lors de l'exportation des homes: {error}"
+
+teleport:
+  warmup: "&eNe bougez pas ! Téléportation dans {seconds} sec."
+  cancelled-moved: "&cTéléportation annulée: vous avez bougé."
+  cancelled-damage: "&cTéléportation annulée: vous avez subi des dégâts."
+  failed: "&cÉchec de la téléportation."
+  world-not-loaded: "&cÉchec de la téléportation: le monde cible n'est pas chargé."
+  success: "&aTéléporté à {name}."
+  no-permission: "&cVous n'avez pas la permission de vous téléporter à vos homes."
+
+gui:
+  main-title: "Vos Homes"
+  slot-blocked: "&cCet emplacement est bloqué par votre limite de homes ({limit})."
+  home-lost: "&cLe home {name} n'existe plus."
+
+  barrier-name: "&cEmplacement verrouillé"
+  barrier-lore:
+    - "&7Limite de homes: &f{limit}"
+    - "&8Cet emplacement est verrouillé."
+
+  compass-name: "&6{name}"
+  compass-lore-world: "&7Monde: &f{world}"
+  compass-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  compass-lore-teleport: "&aClic gauche — Téléportation"
+  compass-lore-manage: "&eClic droit — Gérer le home"
+
+  editor-title: "&3{name}"
+  editor-teleport-name: "&aTéléportation"
+  editor-teleport-lore:
+    - "&7Cliquez pour vous"
+    - "&7téléporter à {name}."
+
+  editor-info-name: "&6Home {name}"
+  editor-info-lore-world: "&7Monde: &f{world}"
+  editor-info-lore-coords: "&7X: {x}  Y: {y}  Z: {z}"
+  editor-info-lore-rotation: "&8Angle: {yaw}° / {pitch}°"
+
+  editor-delete-name: "&cConfirmer la suppression"
+  editor-delete-lore:
+    - "&7Cliquez pour supprimer"
+    - "&7définitivement {name}."
+    - ""
+    - "&4Action irréversible !"
+
+  editor-back-name: "&eRetour"
+  editor-back-lore:
+    - "&7Retourner à la liste des homes"
+
+console:
+  storage-init-mysql: "[Homes] Connexion au stockage MySQL ({host}:{port}/{database})..."
+  storage-init-yaml: "[Homes] Initialisation du stockage Legacy YAML ({file})..."
+  storage-init-sqlite: "[Homes] Initialisation du stockage local SQLite ({file})..."
+  storage-success: "[Homes] Stockage {type} initialisé avec succès."
+  storage-error: "[Homes] Erreur critique lors de l'initialisation du stockage {type} !"
+  storage-close-error: "[Homes] Erreur lors de la fermeture du stockage précédent :"
+  storage-reload-error: "[Homes] Erreur de connexion au nouveau stockage lors du rechargement !"
+  homes-loaded: "[Homes] {count} homes chargés depuis la base de données."
+  homes-load-error: "[Homes] Erreur lors du chargement des homes depuis la base de données !"
+  migration-found: "[Homes] Fichier homes.yml hérité détecté. Migration automatique en cours..."
+  migration-success: "[Homes] Migration terminée avec succès ! {count} homes migrés."
+  migration-error: "[Homes] Erreur lors de la sauvegarde du home migré {name} :"
+  save-async-error: "[Homes] Erreur lors de la sauvegarde asynchrone du home {name} (joueur {uuid}) :"
+  plugin-disabled: "[Homes] Homes est désactivé !"
+  init-failed: "[Homes] Impossible d'initialiser le stockage ! Désactivation du plugin."
+  updates-checking: "[Homes] Recherche de mises à jour..."
+  updates-latest: "[Homes] Vous utilisez la dernière version (v{version})"
+  updates-available: "[Homes] Nouvelle version disponible : v{remote} (Actuelle : v{current})"
+  updates-download: "[Homes] Télécharger la mise à jour sur :"
+  updates-fail: "[Homes] Impossible de récupérer la version depuis l'API Modrinth/GitHub."
+  updates-error: "[Homes] Erreur lors de la vérification des mises à jour : {error}"
+
+banner:
+  hello: "  Bonjour le monde !"
+  telegram: "  Rejoignez notre chaîne Telegram !"
+  version: "  Version de Homes : {version}"
+  language: "  Langue : {language}"
+  storage: "  Stockage : {storage}"
+  encryption-enabled: "ACTIVÉ (AES-256-GCM)"
+  encryption-disabled: "DÉSACTIVÉ"
+  encryption: "  Chiffrement : {status}"
+  platform: "  Homes s'exécute sur {platform}"
+  reloaded: "  Homes a été rechargé avec succès !"
+  enabled: "  Homes a été activé avec succès !"
