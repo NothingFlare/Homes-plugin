@@ -1,4 +1,4 @@
-# Homes (by NothingFlare)
+# Homes 
 
 **Homes** is a fast, secure, and lightweight home management plugin for Minecraft servers[cite: 4]. Featuring a clean compass GUI[cite: 5], multi-backend storage (**SQLite, MySQL, and Legacy YAML**)[cite: 4], end-to-end **AES-256-GCM coordinate encryption** for complete player privacy[cite: 4], and built-in localization in **13 languages**[cite: 4].
 
